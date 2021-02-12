@@ -19,7 +19,7 @@
       <!-- Reset -->
       <button
         class="py-1 px-3 rounded-2xl text-white bg-red-500 focus:outline-none focus:ring focus:ring-red-500 focus:ring-opacity-50 hover:bg-red-600"
-        @click="removeAllTodos"
+        @click="resetTodos"
       >
         <i class="mdi mdi-history"></i>
         Remove All Todos
@@ -149,10 +149,13 @@ export default {
         1
       )
     },
-    removeAllTodos() {
+    resetTodos() {
       this.setDeleteDialog({
         text: 'Are you sure want to remove all todos?',
-        callback: () => this.removeAllTodos()
+        callback: () => {
+          this.todos = []
+          this.removeAllTodos()
+        }
       })
     },
     infiniteHandler($state) {
