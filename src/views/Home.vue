@@ -21,7 +21,7 @@
 
       <!-- Reset -->
       <button
-        class="py-1 px-3 rounded-2xl text-white bg-red-500 focus:outline-none focus:ring focus:ring-red-500 focus:ring-opacity-50 hover:bg-red-600"
+        class="py-1 px-3 rounded-2xl text-white bg-red-500 focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50 hover:bg-red-400"
         @click="resetTodos"
       >
         <i class="mdi mdi-history"></i>
