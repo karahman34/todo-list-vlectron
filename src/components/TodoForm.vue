@@ -34,6 +34,7 @@
           ></custom-select>
         </div>
 
+        <!-- Description -->
         <custom-textarea
           label="Description"
           placeholder="Description"

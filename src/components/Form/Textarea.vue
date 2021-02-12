@@ -6,7 +6,7 @@
     <textarea
       :id="componentId"
       class="w-full h-full block px-3 py-1 rounded-md shadow-sm transition-shadow border border-gray-300 outline-none"
-      rows="3"
+      rows="5"
       :class="{
         'border-red-500': errorMessage,
         'focus:ring-2 focus:ring-indigo-500': !errorMessage
