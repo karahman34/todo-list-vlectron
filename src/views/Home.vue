@@ -9,7 +9,10 @@
     </router-link>
 
     <!-- Header -->
-    <div class="mb-3 flex flex-wrap justify-between items-center">
+    <div
+      v-if="todos.length"
+      class="mb-3 flex flex-wrap justify-between items-center"
+    >
       <custom-select
         v-model="order"
         :options="['newest', 'oldest']"
@@ -29,9 +32,16 @@
     <!-- Empty Todos -->
     <div
       v-if="!todos.length"
-      class="min-h-full w-full flex justify-center items-center text-gray-600 text-2xl"
+      class="mt-4 w-full flex flex-col space-y-1 items-center"
     >
-      No Todos.
+      <span class="text-gray-600 text-2xl">You has no todos.</span>
+      <router-link
+        to="/create"
+        class="block w-max py-1 px-3 bg-indigo-600 rounded shadow text-white focus:outline-none hover:bg-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50"
+      >
+        <i class="mdi mdi-flag"></i>
+        Create One
+      </router-link>
     </div>
 
     <!-- Todo List -->
